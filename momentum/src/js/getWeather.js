@@ -1,4 +1,4 @@
-import { API_WEATHER, WEATHER } from "../common/const";
+import { API_WEATHER, PLACEHOLDER, WEATHER } from "../common/const";
 import { getLocalStorage, setLocalStorage } from "../common/util";
 
 
@@ -8,9 +8,10 @@ const wind = document.querySelector('.wind');
 const humidity = document.querySelector('.humidity');
 const weatherDescription = document.querySelector('.weather-description');
 const cityName = document.querySelector('.city');
-const weatherError = document.querySelector('.weather-error');
+// const weatherError = document.querySelector('.weather-error');
 
 async function getWeather(lang = 'en', city = 'Minsk'){
+  cityName.setAttribute('placeholder', PLACEHOLDER.en.city);
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${lang}&appid=${API_WEATHER}&units=metric`;
   fetch(url)
     .then(res => res.json())
@@ -26,8 +27,7 @@ async function getWeather(lang = 'en', city = 'Minsk'){
       temperature.textContent = '';
       wind.textContent = '';
       humidity.textContent = '';
-      weatherDescription.textContent = '';
-      weatherError.textContent = WEATHER[lang].err;
+      weatherDescription.textContent = WEATHER[lang].err;
     })
 };
 

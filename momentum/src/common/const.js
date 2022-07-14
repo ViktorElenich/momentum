@@ -45,6 +45,11 @@ const DEFAULT_CITY = {
   'en': 'St. Petersburg'
 };
 
+const QUOTES = {
+  'ru': 'quotes/dataRu.json',
+  'en': 'quotes/dataEn.json'
+}
+
 const API_WEATHER = 'd25b5175e0bf7e9b83814d35136d4a7a';
 
 const LANGUAGES = [
@@ -52,4 +57,4 @@ const LANGUAGES = [
   'en',
 ];
 
-export { GREETING, PLACEHOLDER, TIMES_OF_DAY, WEATHER, DATE, LANGUAGES, DEFAULT_CITY, API_WEATHER };
+export { GREETING, PLACEHOLDER, TIMES_OF_DAY, WEATHER, DATE, LANGUAGES, DEFAULT_CITY, API_WEATHER, QUOTES };
