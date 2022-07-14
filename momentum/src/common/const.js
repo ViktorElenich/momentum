@@ -57,4 +57,41 @@ const LANGUAGES = [
   'en',
 ];
 
-export { GREETING, PLACEHOLDER, TIMES_OF_DAY, WEATHER, DATE, LANGUAGES, DEFAULT_CITY, API_WEATHER, QUOTES };
+const PLAYLIST = [
+  {
+      img : 'assets/imgSound/stay.png',
+      name : 'Stay',
+      artist : 'The Kid LAROI, Justin Bieber',
+      music : 'assets/sounds/stay.mp3'
+  },
+  {
+      img : 'assets/imgSound/fallingdown.jpg',
+      name : 'Falling Down',
+      artist : 'Wid Cards',
+      music : 'assets/sounds/fallingdown.mp3'
+  },
+  {
+      img : 'assets/imgSound/faded.png',
+      name : 'Faded',
+      artist : 'Alan Walker',
+      music : 'assets/sounds/Faded.mp3'
+  },
+  {
+      img : 'assets/imgSound/ratherbe.jpg',
+      name : 'Rather Be',
+      artist : 'Clean Bandit',
+      music : 'assets/sounds/Rather Be.mp3'
+  }
+];
+
+export {
+  GREETING,
+  PLACEHOLDER,
+  TIMES_OF_DAY,
+  WEATHER, DATE,
+  LANGUAGES,
+  DEFAULT_CITY,
+  API_WEATHER,
+  QUOTES,
+  PLAYLIST
+};
