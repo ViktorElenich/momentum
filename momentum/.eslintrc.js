@@ -18,6 +18,8 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-new': 'off',
     'no-return-assign': 'off',
-    'no-use-before-define': 'off'
+    'no-use-before-define': 'off',
+    'eqeqeq': 'off',
+    'import/no-mutable-exports': 'off'
   },
 }

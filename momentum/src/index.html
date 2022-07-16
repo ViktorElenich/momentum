@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="assets/favicon.ico" rel="shortcut icon" />
-  <link rel="stylesheet" href="./scss/base/owfont-regular.css" />
+  <link rel="stylesheet" href="./scss/abstracts/owfont-regular.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -59,15 +59,17 @@
     </div>
     </div>
     <div class="weather">
-      <input type="text" class="city" />
-      <i class="weather-icon owf"></i>
-      <div class="weather-error"></div>
-      <div class="description-container">
-        <span class="temperature"></span>
-        <span class="weather-description"></span>
+      <div class="weather__container">
+        <input type="text" class="city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
       </div>
-      <div class="wind"></div>
-      <div class="humidity"></div>
     </div>
   </header>
   <main class="main">
@@ -77,17 +79,78 @@
     </div>
     <time class="time"></time>
     <date class="date"></date>
-    <div class="greeting-container">
+    <div class="greeting__container">
       <span class="greeting"></span>
       <input type="text" class="name" />
     </div>
   </main>
   <footer class="footer">
-    <button class="change-quote"></button>
-    <div>
-      <div class="quote"></div>
-      <div class="author"></div>
+    <button class="settings__btn"></button>
+    <div class="settings">
+      <div class="settings__container">
+        <div class="choose language__option">
+          <p class="title">Choose language</p>
+          <select class="language">
+            <option value="en">english</option>
+            <option value="ru">russian</option>
+          </select>
+        </div>
+        <div class="choose photo__sourse">
+          <p class="title">Choose Photo Source</p>
+          <select class="photo">
+            <option value="github">GitHub</option>
+            <option value="unsplash">Unsplash Api</option>
+            <option value="flickr">Flickr Api</option>
+          </select>
+        </div>
+        <div class="choose theme__background">
+          <p class="title">Choose Background Theme</p>
+          <input type="text" class="theme">
+        </div>
+        <div class="show__elements">
+          <p class="title">Show:</p>
+          <div class="show__elements-items">
+            <div class="item">
+              <input type="checkbox" id="time" name="time" checked>
+              <label for="time">time</label>
+            </div>
+            <div class="item">
+              <input type="checkbox" id="date" name="date" checked>
+              <label for="date">date</label>
+            </div>
+            <div class="item">
+              <input type="checkbox" id="greeting" name="greeting__container" checked>
+              <label for="greeting__container">greeting</label>
+            </div>
+            <div class="item">
+              <input type="checkbox" id="quotes" name="qoutes__container" checked>
+              <label for="qoutes__container">quotes</label>
+            </div>
+            <div class="item">
+              <input type="checkbox" id="weather" name="weather" checked>
+              <label for="weather">weather</label>
+            </div>
+            <div class="item">
+              <input type="checkbox" id="audio" name="player" checked>
+              <label for="audio">audioplayer</label>
+            </div>
+            <div class="item">
+              <input type="checkbox" id="todo" name="todo__btn" checked>
+              <label for="todo__btn">todo</label>
+            </div>
+          </div>
+        </div>
+        <div class="about__me"></div>
+      </div>
     </div>
+    <div class="qoutes__container">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <button class="todo__btn"></button>
   </footer>
 </body>
 </html>
