@@ -11,13 +11,14 @@
     align-self: flex-end;
     border: none;
     appearance: none;
+    cursor: pointer;
   }
 
   .settings {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 30%;
+    width: 360px;
+    height: 40%;
     position: fixed;
     left: 10px;
     bottom: 60px;
@@ -30,19 +31,16 @@
     transition: all 0.6s ease 0s;
 
     .settings__container {
-      display: grid;
-      grid-auto-rows: 20px;
+      display: flex;
+      flex-direction: column;
       gap: 10px;
+      width: 100%;
     }
 
     .choose {
       display: flex;
       justify-content: space-between;
-
-      .title {
-        font-size: 0.9rem;
-        white-space: nowrap;
-      }
+      height: 20px;
 
       select {
         font-size: 0.8em;
@@ -57,6 +55,11 @@
       }
     }
 
+    .title {
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
     .show__elements {
       display: flex;
       flex-direction: column;
@@ -67,6 +70,9 @@
         grid-template-columns: repeat(2, 150px);
         gap: 10px;
         justify-items: start;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 7px;
 
         label {
           font-size: 0.9em;
@@ -75,7 +81,7 @@
     }
   }
 
-  .qoutes__container {
+  .quotes__container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -108,5 +114,6 @@
     border: none;
     appearance: none;
     margin: 0 15px 15px 0;
+    cursor: pointer;
   }
 }

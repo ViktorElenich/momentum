@@ -23,7 +23,7 @@ const WEATHER = {
     'wind_units': 'm/s',
     'humidity': 'Humidity',
     'err': 'Data loading error. Enter the city again',
-    'city': 'Saint-Petersburg',
+    'city': 'Minsk',
   },
   'ru': {
     'lang': 'ru',
@@ -31,7 +31,7 @@ const WEATHER = {
     'wind_units': 'м/с',
     'humidity': 'Влажность',
     'err': 'Ошибка загрузки данных. Введите город еще раз',
-    'city': 'Санкт-Петербург'
+    'city': 'Минск'
   },
 };
 
@@ -40,17 +40,14 @@ const DATE = {
   'en': 'en-US'
 };
 
-const DEFAULT_CITY = {
-  'ru': 'Санкт-Петербург',
-  'en': 'St. Petersburg'
-};
-
 const QUOTES = {
   'ru': 'quotes/dataRu.json',
   'en': 'quotes/dataEn.json'
 }
 
 const API_WEATHER = 'd25b5175e0bf7e9b83814d35136d4a7a';
+const API_UNSPLASH = 'jzRAJmb2sI2UxKZFG2cgpbd492IhZYfejwBf82okOww';
+const API_FLICKR = '898d23fc4caa1c0f3b5d6324c75676aa';
 
 const LANGUAGES = [
   'ru',
@@ -84,14 +81,49 @@ const PLAYLIST = [
   }
 ];
 
+const SETTINGS = {
+  'ru': {
+    'choose-lang': 'Выбрать язык',
+    'russian': 'русский',
+    'english': 'английский',
+    'choose-photo': 'Выбрать источник фона',
+    'choose-theme': 'Выбрать тему фона',
+    'text-show"': 'Показать',
+    'elements-date': 'дата',
+    'elements-time': 'время',
+    'elements-weather': 'погода',
+    'elements-greeting': 'приветствие',
+    'elements-quotes': 'цитаты',
+    'elements-audio': 'плеер',
+    'elements-todo': 'список дел',
+  },
+  'en': {
+    'choose-lang': 'Choose language',
+    'russian': 'russian',
+    'english': 'english',
+    'choose-photo': 'Choose Photo Source',
+    'choose-theme': 'Choose Background Theme',
+    'text-show"': 'Show',
+    'elements-date': 'date',
+    'elements-time': 'time',
+    'elements-weather': 'weather',
+    'elements-greeting': 'greeting',
+    'elements-quotes': 'quotes',
+    'elements-audio': 'audio',
+    'elements-todo': 'todo',
+  }
+};
+
 export {
   GREETING,
   PLACEHOLDER,
   TIMES_OF_DAY,
   WEATHER, DATE,
   LANGUAGES,
-  DEFAULT_CITY,
   API_WEATHER,
+  API_UNSPLASH,
+  API_FLICKR,
   QUOTES,
-  PLAYLIST
+  PLAYLIST,
+  SETTINGS
 };

@@ -5,12 +5,14 @@ import getWeather from './js/getWeather';
 import getQuotes from './js/getQuotes';
 import { loadTrack, trackIndex } from './js/audio';
 import { openCloseSettings, showHideElements, setSettingsData } from './js/settings';
+import { switchLanguage, lang } from './js/switchLang';
 
-getTime();
+switchLanguage();
+window.addEventListener('load', () => setSettingsData(lang));
+getTime(lang);
 setBg();
-getWeather();
-getQuotes();
+getWeather(lang);
+getQuotes(lang);
 loadTrack(trackIndex);
 openCloseSettings();
 showHideElements();
-window.addEventListener('load', setSettingsData)
