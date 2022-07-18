@@ -25,8 +25,8 @@
     transform: translateX(-120%);
     padding: 15px;
     border: 2px solid rgb(128, 124, 124);
-    background: rgba(0,0,0,0.7);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    background: $settings-background;
+    box-shadow: $settings-box-shadow;
     border-radius: 20px;
     transition: all 0.6s ease 0s;
 
@@ -74,6 +74,10 @@
         border-radius: 5px;
         padding: 7px;
 
+        .form-check-input, .form-check-label {
+          cursor: pointer;
+        }
+
         label {
           font-size: 0.9em;
         }
@@ -115,5 +119,61 @@
     appearance: none;
     margin: 0 15px 15px 0;
     cursor: pointer;
+    outline: none;
+  }
+}
+
+.todo__container {
+  width: 350px;
+  position: fixed;
+  bottom: 55px;
+  right: 15px;
+  transform: translateX(120%);
+  background: $settings-background;
+  box-shadow: $settings-box-shadow;
+  border-radius: 10px;
+  transition: all 0.6s ease 0s;
+
+  .newtask {
+    position: relative;
+    padding: 20px 20px;
+  }
+
+  .tasks {
+    padding: 20px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+
+    .task {
+      border-radius: 5px;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #939697;
+      cursor: pointer;
+      background-color: #c5e1e6;
+      height: 40px;
+      margin-bottom: 8px;
+      padding: 5px 10px;
+      display: flex;
+
+      span {
+        font-size: 15px;
+        font-weight: 400;
+        color: black;
+      }
+
+      button {
+        background-color: #0a2ea4;
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        height: 100%;
+        width: 40px;
+        border-radius: 5px;
+      }
+    }
   }
 }

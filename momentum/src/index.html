@@ -110,33 +110,33 @@
         <div class="show__elements">
           <p class="title text-show">Show:</p>
           <div class="show__elements-items">
-            <div class="item">
-              <input type="checkbox" id="time" name="time" checked>
-              <label class="text-time" for="time">time</label>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="time" role="switch" name="time" checked>
+              <label class="text-time form-check-label" for="time">time</label>
             </div>
-            <div class="item">
-              <input type="checkbox" id="date" name="date" checked>
-              <label class="text-date" for="date">date</label>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="date" role="switch" name="date" checked>
+              <label class="text-date form-check-label" for="date">date</label>
             </div>
-            <div class="item">
-              <input type="checkbox" id="greeting" name="greeting__container" checked>
-              <label class="text-greet" for="greeting">greeting</label>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="greeting" role="switch" name="greeting__container" checked>
+              <label class="text-greet form-check-label" for="greeting">greeting</label>
             </div>
-            <div class="item">
-              <input type="checkbox" id="quotes" name="quotes__container" checked>
-              <label class="text-quotes" for="quotes">quotes</label>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="quotes" role="switch" name="quotes__container" checked>
+              <label class="text-quotes form-check-label" for="quotes">quotes</label>
             </div>
-            <div class="item">
-              <input type="checkbox" id="weather" name="weather" checked>
-              <label class="text-weather" for="weather">weather</label>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="weather" role="switch" name="weather" checked>
+              <label class="text-weather form-check-label" for="weather">weather</label>
             </div>
-            <div class="item">
-              <input type="checkbox" id="audio" name="player" checked>
-              <label class="text-audio" for="audio">audioplayer</label>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="audio" role="switch" name="player" checked>
+              <label class="text-audio form-check-label" for="audio">audioplayer</label>
             </div>
-            <div class="item">
-              <input type="checkbox" id="todo" name="todo__btn" checked>
-              <label class="text-todo" for="todo">todo</label>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="todo" role="switch" name="todo__btn" checked>
+              <label class="text-todo form-check-label" for="todo">todo</label>
             </div>
           </div>
         </div>
@@ -151,6 +151,13 @@
       </div>
     </div>
     <button class="todo__btn"></button>
+    <div class="todo__container">
+      <div id="newtask" class="newtask input-group mb-3">
+        <input type="text" class="form-control" placeholder="Enter a task">
+        <button id="add" class="btn btn-outline-primary">Add</button>
+      </div>
+      <div class="tasks" id="tasks"></div>
+    </div>
   </footer>
 </body>
 </html>

@@ -1,10 +1,11 @@
 import './scss/style.scss';
+import './js/todoList';
 import { getTime } from './js/getTime';
 import { setBg } from './js/sliderImage';
 import getWeather from './js/getWeather';
 import getQuotes from './js/getQuotes';
 import { loadTrack, trackIndex } from './js/audio';
-import { openCloseSettings, showHideElements, setSettingsData } from './js/settings';
+import { openCloseSettings, showHideElements, setSettingsData, openCloseTodo } from './js/settings';
 import { switchLanguage, lang } from './js/switchLang';
 
 switchLanguage();
@@ -15,4 +16,5 @@ getWeather(lang);
 getQuotes(lang);
 loadTrack(trackIndex);
 openCloseSettings();
+openCloseTodo();
 showHideElements();

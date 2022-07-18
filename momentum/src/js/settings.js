@@ -3,6 +3,8 @@ import { setLocalStorage } from "../common/util";
 
 const settings = document.querySelector('.settings');
 const settingsBtn = document.querySelector('.settings__btn');
+const todoBtn = document.querySelector('.todo__btn');
+const todoContainer = document.querySelector('.todo__container');
 const elementsList = document.querySelectorAll('.item input');
 const elementsListText = document.querySelectorAll('.item label');
 const textChooseLang = document.querySelector('.choose-lang');
@@ -31,6 +33,18 @@ const openCloseSettings = () => {
     }
   })
 };
+
+const openCloseTodo = () => {
+  todoBtn.addEventListener('click', () => {
+    if (isOpen === false) {
+      isOpen = true;
+      todoContainer.style.transform = `translateX(0)`;
+    } else if (isOpen === true) {
+      isOpen = false;
+      todoContainer.style.transform = `translateX(120%)`;
+    }
+  })
+}
 
 const showHideElements = () => {
   elementsList.forEach(item => {
@@ -79,5 +93,5 @@ const setSettingsData = (lang) => {
 }
 
 
-export { openCloseSettings, showHideElements, setSettingsData };
+export { openCloseSettings, openCloseTodo, showHideElements, setSettingsData };
 
