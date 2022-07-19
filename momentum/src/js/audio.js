@@ -20,6 +20,7 @@ const wave = document.getElementById('wave');
 const randomIcon = document.querySelector('.fa-random');
 const randomBtn = document.querySelector('.random-track');
 const currentTrack = document.createElement('audio');
+const audioCheck = document.getElementById('audio');
 
 let trackIndex = 0;
 let isPlaying = false;
@@ -151,6 +152,7 @@ function repeatTrack() {
   playTrack();
 };
 
+audioCheck.addEventListener('change', pauseTrack);
 seekSlider.addEventListener('change', seekTo);
 volumeSlider.addEventListener('change', setVolume);
 randomBtn.addEventListener('click', randomTrack);
