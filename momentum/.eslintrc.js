@@ -20,6 +20,9 @@ module.exports = {
     'no-return-assign': 'off',
     'no-use-before-define': 'off',
     'eqeqeq': 'off',
+    'consistent-return': 'off',
+    'no-useless-return': 'off',
+    'array-callback-return': 'off',
     'import/no-cycle': 'off',
     'import/no-mutable-exports': 'off'
   },

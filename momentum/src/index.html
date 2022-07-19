@@ -151,13 +151,13 @@
       </div>
     </div>
     <button class="todo__btn"></button>
-    <div class="todo__container">
+    <form class="todo__container">
       <div id="newtask" class="newtask input-group mb-3">
-        <input type="text" class="form-control" placeholder="Enter a task">
-        <button id="add" class="btn btn-outline-primary">Add</button>
+        <input type="text" class="form-control" name="name" autofocus placeholder="Add new task...">
+        <button type="submit" id="add" class="btn btn-outline-primary">Add</button>
       </div>
       <div class="tasks" id="tasks"></div>
-    </div>
+    </form>
   </footer>
 </body>
 </html>
