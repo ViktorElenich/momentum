@@ -1,4 +1,4 @@
-import { SETTINGS } from "../common/const";
+import { SETTINGS, TODO_LIST } from "../common/const";
 import { setLocalStorage } from "../common/util";
 
 const settings = document.querySelector('.settings');
@@ -15,6 +15,8 @@ const ruLang = document.querySelector('option[value="ru"]');
 const enLang = document.querySelector('option[value="en"]');
 const switchPhotoSource = document.querySelector('.photo');
 const themeBackgroundContainer = document.querySelector('.theme__background');
+const todoInput = document.querySelector('.form-control');
+const todoTextBtn = document.querySelector('.newtask button');
 
 let isOpen = false;
 let changeDeg = 0;
@@ -64,11 +66,11 @@ const showHideElements = () => {
   });
   switchPhotoSource.addEventListener('change', () => {
     if (switchPhotoSource.value == 'unsplash' || switchPhotoSource.value == 'flickr') {
-      themeBackgroundContainer.classList.remove('show');
-      themeBackgroundContainer.classList.add('hide');
-    } else {
       themeBackgroundContainer.classList.remove('hide');
       themeBackgroundContainer.classList.add('show');
+    } else {
+      themeBackgroundContainer.classList.remove('show');
+      themeBackgroundContainer.classList.add('hide');
     }
   })
 };
@@ -90,6 +92,9 @@ const setSettingsData = (lang) => {
   textShow.textContent =SETTINGS[lang]['text-show'];
   ruLang.textContent = SETTINGS[lang].russian;
   enLang.textContent = SETTINGS[lang].english;
+
+  todoInput.setAttribute('placeholder', TODO_LIST[lang].Placeholder);
+  todoTextBtn.textContent = TODO_LIST[lang]['Add-btn'];
 }
 
 

@@ -24,7 +24,7 @@
     bottom: 60px;
     transform: translateX(-120%);
     padding: 15px;
-    border: 2px solid rgb(128, 124, 124);
+    border: $border;
     background: $settings-background;
     box-shadow: $settings-box-shadow;
     border-radius: 20px;
@@ -52,6 +52,8 @@
         width: 100px;
         border-radius: 5px;
         outline: none;
+        padding: 4px;
+        font-size: 12px;
       }
     }
 
@@ -80,6 +82,44 @@
 
         label {
           font-size: 0.9em;
+        }
+      }
+    }
+
+    .line {
+      width: 95%;
+      height: 1px;
+      background-color: #fff;
+      margin: 10px auto;
+    }
+
+    .about__me {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo_rss {
+        background: url(/assets/logo_rs.png) no-repeat;
+        background-size: contain;
+        width: 90px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.5s;
+      }
+
+      .gh_author {
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.5s;
+      }
+
+      .logo_rss, .gh_author {
+        &:hover {
+          opacity: 1;
+          transition: 0.5s;
         }
       }
     }
@@ -130,6 +170,7 @@
   right: 15px;
   padding: 20px 20px;
   transform: translateX(120%);
+  border: $border;
   background: $settings-background;
   box-shadow: $settings-box-shadow;
   border-radius: 10px;

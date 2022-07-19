@@ -11,11 +11,11 @@ const getGreeting = (date, lang) => {
   name.setAttribute('placeholder', PLACEHOLDER[lang].name);
   cityName.setAttribute('placeholder', PLACEHOLDER[lang].city);
   name.addEventListener('change', (event) => {
-    setLocalStorage('name', event.target.value)
+    setLocalStorage('name', event.target.value);
   });
 }
 
-const getNameFromLocalStorage = () => name.value = getLocalStorage('name')
+const getNameFromLocalStorage = () => name.value = getLocalStorage('name');
 window.addEventListener('load', getNameFromLocalStorage);
 
 export default getGreeting;

@@ -21,4 +21,10 @@ const switchLanguage = () => {
   })
 };
 
+window.addEventListener('beforeunload', () => setLocalStorage('language', language.value));
+
+const languageValueFromLocalStorage = () => language.value = getLocalStorage('language') || 'en';
+
+window.addEventListener('load', languageValueFromLocalStorage);
+
 export { switchLanguage, lang };

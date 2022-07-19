@@ -43,7 +43,7 @@ const DATE = {
 const QUOTES = {
   'ru': 'quotes/dataRu.json',
   'en': 'quotes/dataEn.json'
-}
+};
 
 const API_WEATHER = 'd25b5175e0bf7e9b83814d35136d4a7a';
 const API_UNSPLASH = 'jzRAJmb2sI2UxKZFG2cgpbd492IhZYfejwBf82okOww';
@@ -114,6 +114,17 @@ const SETTINGS = {
   }
 };
 
+const TODO_LIST = {
+  'en': {
+    'Add-btn': 'Add',
+    'Placeholder': 'Add new task...'
+  },
+  'ru': {
+    'Add-btn': 'Добавить',
+    'Placeholder': 'Добавить задачу...'
+  }
+};
+
 export {
   GREETING,
   PLACEHOLDER,
@@ -125,5 +136,6 @@ export {
   API_FLICKR,
   QUOTES,
   PLAYLIST,
-  SETTINGS
+  SETTINGS,
+  TODO_LIST
 };
