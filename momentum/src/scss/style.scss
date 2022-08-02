@@ -2,6 +2,7 @@
 @import './layots/header';
 @import './layots/main';
 @import './layots/footer';
+@import './layots/preloader';
 
 * {
   box-sizing: border-box;
@@ -16,7 +17,6 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
 }

@@ -8,6 +8,10 @@ import { loadTrack, trackIndex } from './js/audio';
 import { openCloseSettings, showHideElements, setSettingsData, openCloseTodo } from './js/settings';
 import { switchLanguage, lang } from './js/switchLang';
 
+window.onload = () => {
+  document.querySelector('.preloader__container').classList.add('preloader-remove');
+}
+
 switchLanguage();
 window.addEventListener('load', () => setSettingsData(lang));
 getTime(lang);
