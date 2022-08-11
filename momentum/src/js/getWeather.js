@@ -12,7 +12,7 @@ const cityName = document.querySelector('.city');
 
 cityName.value = 'Minsk';
 
-async function getWeather(language, city = getLocalStorage('cite') === 0 ? 'Minsk' : getLocalStorage('city')){
+async function getWeather(language, city = getLocalStorage('city') === 0 ? 'Minsk' : getLocalStorage('city')){
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=${language}&appid=${API_WEATHER}&units=metric`;
   fetch(url)
     .then(res => res.json())
