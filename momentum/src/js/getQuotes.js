@@ -1,11 +1,12 @@
 import { QUOTES } from "../common/const";
 import { getRandomNum } from "./sliderImage";
+import { getLocalStorage } from "../common/util";
 
 const button = document.querySelector('.change-quote');
 const quotes = document.querySelector('.quote');
 const author = document.querySelector('.author');
 
-const getQuotes = async (lang = 'en') => {
+const getQuotes = async (lang = getLocalStorage('language') || 'en') => {
   const res = await fetch(QUOTES[lang]);
   const data = await res.json();
   const index = getRandomNum(0, data.length - 1);
