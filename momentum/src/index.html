@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="./scss/abstracts/owfont-regular.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <title>Momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player">
+      <div class="player__wrapper">
+        <div class="player__details">
+          <div class="now-playing">PLAYING x OF y</div>
+          <div class="track-art"></div>
+          <div class="track-name">Track Name</div>
+          <div class="track-artist">Track Artist</div>
+        </div>
+        <div class="player-slider__container">
+          <div class="current-time">00:00</div>
+          <input type="range" min="1" max="100" value="0" class="seek_slider">
+          <div class="total-duration">00:00</div>
+        </div>
+        <div class="player-slider__container">
+          <i class="fa fa-volume-down"></i>
+          <input type="range" min="1" max="100" value="99" class="volume_slider">
+          <i class="fa fa-volume-up"></i>
+        </div>
+        <div class="container__controls">
+          <div class="random-track">
+            <i class="fas fa-random fa-2x" title="random"></i>
+          </div>
+          <div class="prev-track">
+            <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track">
+              <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="next-track">
+              <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+            <div class="repeat-track">
+              <i class="fa fa-repeat fa-2x" title="repeat"></i>
+            </div>
+        </div>
+        <div id="wave">
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+          <span class="stroke"></span>
+        </div>
+    </div>
+    </div>
+    <div class="weather">
+      <div class="weather__container">
+        <input type="text" class="city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time"></time>
+    <date class="date"></date>
+    <div class="greeting__container">
+      <span class="greeting"></span>
+      <input type="text" class="name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <button class="settings__btn"></button>
+    <div class="settings">
+      <div class="settings__container">
+        <div class="choose language__option">
+          <p class="title choose-lang">Choose language</p>
+          <select class="language">
+            <option value="en">english</option>
+            <option value="ru">russian</option>
+          </select>
+        </div>
+        <div class="choose photo__sourse">
+          <p class="title choose-photo">Choose Photo Source</p>
+          <select class="photo">
+            <option value="github">GitHub</option>
+            <option value="unsplash">Unsplash Api</option>
+            <option value="flickr">Flickr Api</option>
+          </select>
+        </div>
+        <div class="choose theme__background">
+          <p class="title choose-theme">Choose Background Theme</p>
+          <input type="text" class="theme">
+        </div>
+        <div class="show__elements">
+          <p class="title text-show">Show:</p>
+          <div class="show__elements-items">
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="time" role="switch" name="time" checked>
+              <label class="text-time form-check-label" for="time">time</label>
+            </div>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="date" role="switch" name="date" checked>
+              <label class="text-date form-check-label" for="date">date</label>
+            </div>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="greeting" role="switch" name="greeting__container" checked>
+              <label class="text-greet form-check-label" for="greeting">greeting</label>
+            </div>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="quotes" role="switch" name="quotes__container" checked>
+              <label class="text-quotes form-check-label" for="quotes">quotes</label>
+            </div>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="weather" role="switch" name="weather" checked>
+              <label class="text-weather form-check-label" for="weather">weather</label>
+            </div>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="audio" role="switch" name="player" checked>
+              <label class="text-audio form-check-label" for="audio">audioplayer</label>
+            </div>
+            <div class="item form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="todo" role="switch" name="todo__btn" checked>
+              <label class="text-todo form-check-label" for="todo">todo</label>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="about__me">
+          <a href="https://rs.school/js-stage0/" class="logo_rss"></a>
+          <a href="https://github.com/ViktorElenich" class="gh_author"><i class="fa fa-github" aria-hidden="true"></i> Viktor Elenich</a>
+        </div>
+      </div>
+    </div>
+    <div class="quotes__container">
+      <button class="change-quote"></button>
+      <div>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+    </div>
+    <button class="todo__btn"></button>
+    <form class="todo__container">
+      <div id="newtask" class="newtask input-group mb-3">
+        <input type="text" class="form-control" name="name" autofocus placeholder="Add new task...">
+        <button type="submit" id="add" class="btn btn-outline-primary">Add</button>
+      </div>
+      <div class="tasks" id="tasks"></div>
+    </form>
+  </footer>
+  <div class="preloader__container">
+    <div class="preloader"></div>
+  </div>
+</body>
+</html>
